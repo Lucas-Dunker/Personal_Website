@@ -1,18 +1,12 @@
----
-import { getCollection } from "astro:content";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import siteConfig from "../layouts/site-config";
----
-
-<BaseLayout description={siteConfig.description}>
-	{
-		(
-			<div class="mb-16 sm:mb-24">
-				<h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">
-					Projects
-				</h2>
-				<div class="mt-12 sm:mt-16" />
-			</div>
-		)
-	}
-</BaseLayout>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Lucas!</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+	</body>
+</html>
