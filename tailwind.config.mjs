@@ -1,11 +1,11 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+import defaultTheme from "tailwindcss/defaultTheme";
 
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}"],
   darkMode: "selector",
   theme: {
     fontFamily: {
-      sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
+      sans: ["Inter", ...defaultTheme.fontFamily.sans],
       serif: ["Newsreader", ...defaultTheme.fontFamily.serif],
     },
     extend: {

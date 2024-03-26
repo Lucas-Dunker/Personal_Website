@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family; "Intern", system-ui, sans-serif;
-  }
   :root {
     --color-text-main: 23 23 23; /* #171717 */
     --color-bg-main: 242 241 236; /* #F2F1EC */
