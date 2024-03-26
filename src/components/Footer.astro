@@ -1,17 +1,23 @@
 ---
-
+const date = new Date();
+const currentYear = date.getFullYear();
 ---
 
 <footer>
-  <p>PLACEHOLDER</p>
+  <div>
+    <span
+      >Make with ♥ | © {currentYear} Lucas Dunker. All rights reserved.</span
+    >
+  </div>
 </footer>
 
 <style>
   footer {
-    display: flex;
+    display: inline-block;
     position: fixed;
     bottom: 0;
-    gap: 1rem;
-    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
   }
 </style>

@@ -10,4 +10,12 @@ export default defineConfig({
   output: "server",
   adapter: cloudflare(),
   integrations: [tailwind(), react(), sitemap()],
+  image: {
+    service: {
+      entrypoint: "astro/assets/services/sharp",
+      config: {
+        limitInputPixels: false,
+      },
+    },
+  },
 });

@@ -5,7 +5,7 @@ module.exports = {
   darkMode: "selector",
   theme: {
     fontFamily: {
-      sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
       serif: ["Newsreader", ...defaultTheme.fontFamily.serif],
     },
     extend: {
