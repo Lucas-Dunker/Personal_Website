@@ -1,25 +1,6 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import "@fontsource-variable/inter";
+import PrimaryLayout from "../layouts/PrimaryLayout.astro";
+const pageTitle = "Lucas Dunker";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/jpg" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Lucas Dunker</title>
-  </head>
-  <body class="color-bg-main color-text-main">
-    <Header />
-    <Footer />
-  </body>
-</html>
-
-<style>
-  body {
-    font-family: "Inter", sans-serif;
-  }
-</style>
+<PrimaryLayout pageTitle={pageTitle} />

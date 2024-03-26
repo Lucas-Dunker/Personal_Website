@@ -1,0 +1,27 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "@fontsource-variable/inter";
+const { pageTitle } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/jpg" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="color-bg-main color-text-main">
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: "Inter", sans-serif;
+  }
+</style>
