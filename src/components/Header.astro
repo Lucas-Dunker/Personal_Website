@@ -2,8 +2,25 @@
 import Navigation from "./Navigation.astro";
 ---
 
-<header>
+<header class="header">
+  <a class="title-card" href="/">LUCAS DUNKER</a>
   <nav>
     <Navigation />
   </nav>
 </header>
+
+<style>
+  .header {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .title-card {
+    font-size: 2rem;
+    width: fit-content;
+  }
+</style>
