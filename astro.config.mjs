@@ -9,6 +9,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   output: "server",
   adapter: cloudflare(),
+  site: "https://lucasdunker.com",
   integrations: [tailwind(), react(), sitemap()],
   image: {
     service: {
