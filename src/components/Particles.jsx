@@ -25,12 +25,7 @@ export const ParticlesEngine = () => {
     () => ({
       fpsLimit: 60,
       interactivity: {
-        events: {
-          onClick: {
-            enable: true,
-            mode: "repulse",
-          },
-        },
+        events: {},
         modes: {
           push: {
             quantity: 4,
