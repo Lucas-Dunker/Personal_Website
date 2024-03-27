@@ -3,7 +3,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 
 export const ParticlesEngine = () => {
-  const [init, setInit] = useState(false);
+  const [init, setInit] = useState(true);
 
   // this should be run only once per application lifetime
   useEffect(() => {
@@ -23,9 +23,16 @@ export const ParticlesEngine = () => {
 
   const options = useMemo(
     () => ({
-      fpsLimit: 60,
+      fpsLimit: 120,
+      fullScreen: true,
+      zLayers: 1,
       interactivity: {
-        events: {},
+        events: {
+          onClick: {
+            enable: true,
+            mode: "repulse",
+          },
+        },
         modes: {
           push: {
             quantity: 4,
