@@ -1,5 +1,6 @@
 ---
 import PrimaryLayout from "../layouts/PrimaryLayout.astro";
+import { ContactPhotos } from "../components/ContactPhotos";
 const pageTitle = "Contact";
 ---
 
@@ -42,6 +43,9 @@ const pageTitle = "Contact";
         </li>
       </ul>
     </div>
+    <div class="image-container">
+      <ContactPhotos client:visible />
+    </div>
   </div>
 </PrimaryLayout>
 
@@ -49,10 +53,10 @@ const pageTitle = "Contact";
   .contact-container {
     display: flex;
     flex-direction: column;
-    margin-left: 25%;
+    margin-left: 25vw;
     padding: 1rem;
     text-align: left;
-    width: 50%;
+    max-width: 50%;
   }
 
   .content-header {
@@ -76,14 +80,32 @@ const pageTitle = "Contact";
   .contact-element {
     margin-bottom: 2rem;
   }
+  .image-container {
+    position: absolute;
+    right: 20vw;
+    bottom: 30vh;
+  }
 
   @media screen and (max-width: 636px) {
-    .content-header {
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       text-align: center;
+      margin: auto;
+      max-width: 90%;
     }
 
-    .contact-text {
+    .contact-body {
       text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 1500px) {
+    .image-container {
+      position: static;
+      right: auto;
+      left: auto;
     }
   }
 </style>

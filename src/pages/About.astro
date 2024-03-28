@@ -34,10 +34,10 @@ const pageTitle = "About";
     .about-container {
       display: flex;
       flex-direction: column;
-      margin-left: 25%;
+      margin-left: 25vw;
       padding: 1rem;
       text-align: left;
-      width: 50%;
+      max-width: 50%;
     }
 
     .content-header {
@@ -61,6 +61,19 @@ const pageTitle = "About";
     }
 
     @media screen and (max-width: 636px) {
+      .about-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+        max-width: 90%;
+      }
+
+      .lastfm-embed {
+        display: fixed;
+      }
+
       .content-header {
         text-align: center;
       }
