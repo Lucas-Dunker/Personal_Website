@@ -2,6 +2,7 @@
 import "@fontsource-variable/inter";
 import HomepageBanner from "../components/HomepageBanner.astro";
 import { ParticlesEngine } from "../components/Particles";
+import { ViewTransitions } from "astro:transitions";
 const { pageTitle } = Astro.props;
 ---
 
@@ -13,17 +14,16 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <ViewTransitions />
   </head>
   <body>
     <div class="particles-container">
       {(<ParticlesEngine client:load />)}
     </div>
     <HomepageBanner />
-  </body>
+  </body><style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
 </html>
-
-<style>
-  body {
-    font-family: "Inter", sans-serif;
-  }
-</style>
