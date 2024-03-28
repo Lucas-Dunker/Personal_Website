@@ -131,64 +131,66 @@
 </style>
 
 <style lang="scss">
-  .glitch-text:hover,
-  .glitch-text:focus {
-    filter: url(#filter);
-    fill: white;
-    background: black;
-    color: white;
-  }
+  @media screen and (min-width: 636px) {
+    .glitch-text:hover,
+    .glitch-text:focus {
+      filter: url(#filter);
+      fill: white;
+      background: black;
+      color: white;
+    }
 
-  .svgtext {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto;
-  }
+    .svgtext {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+    }
 
-  .top-r,
-  .bot-r,
-  .top-g,
-  .bot-g {
-    stroke: #ffffff;
-  }
+    .top-r,
+    .bot-r,
+    .top-g,
+    .bot-g {
+      stroke: #ffffff;
+    }
 
-  .top-r {
-    stroke-width: 100px;
-    animation: topani 3.5s linear infinite;
-  }
+    .top-r {
+      stroke-width: 100px;
+      animation: topani 3.5s linear infinite;
+    }
 
-  .bot-r {
-    stroke-width: 100px;
-    animation: botani 4s linear infinite;
-  }
+    .bot-r {
+      stroke-width: 100px;
+      animation: botani 4s linear infinite;
+    }
 
-  .top-g {
-    stroke-width: 50px;
-    animation: topani 4s linear reverse infinite;
-  }
+    .top-g {
+      stroke-width: 50px;
+      animation: topani 4s linear reverse infinite;
+    }
 
-  .bot-g {
-    stroke-width: 50%;
-    animation: botani 3.5s linear reverse infinite;
-  }
+    .bot-g {
+      stroke-width: 50%;
+      animation: botani 3.5s linear reverse infinite;
+    }
 
-  @mixin createRandomKeyframes($numberOfKeys) {
-    $delta: round(100 / $numberOfKeys);
+    @mixin createRandomKeyframes($numberOfKeys) {
+      $delta: round(100 / $numberOfKeys);
 
-    @for $i from 1 through $numberOfKeys {
-      $time: ($i * $delta - random($delta)) + "%";
-      #{$time} {
-        stroke-width: random(200) + px;
+      @for $i from 1 through $numberOfKeys {
+        $time: ($i * $delta - random($delta)) + "%";
+        #{$time} {
+          stroke-width: random(200) + px;
+        }
       }
     }
-  }
 
-  @keyframes topani {
-    @include createRandomKeyframes(10 + random(10));
-  }
+    @keyframes topani {
+      @include createRandomKeyframes(10 + random(10));
+    }
 
-  @keyframes botani {
-    @include createRandomKeyframes(10 + random(10));
+    @keyframes botani {
+      @include createRandomKeyframes(10 + random(10));
+    }
   }
 </style>
