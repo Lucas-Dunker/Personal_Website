@@ -3,7 +3,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 
 export const ParticlesEngine = () => {
-  const [init, setInit] = useState(true);
+  const [init, setInit] = useState(false);
 
   // this should be run only once per application lifetime
   useEffect(() => {

@@ -15,7 +15,9 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
-    {(<ParticlesEngine client:load />)}
+    <div class="particles-container">
+      {(<ParticlesEngine client:load />)}
+    </div>
     <HomepageBanner />
   </body>
 </html>
