@@ -2,10 +2,10 @@ import Draggable from "react-draggable";
 
 export const ContactPhotos = () => {
   const photos = [
-    "/public/contactPictures/Alpaca.jpg",
-    "/public/contactPictures/Fuji.jpg",
-    "/public/contactPictures/Kyoto.jpg",
-    "/public/contactPictures/Pisgah.jpg",
+    "/contactPictures/Alpaca.jpg",
+    "/contactPictures/Fuji.jpg",
+    "/contactPictures/Kyoto.jpg",
+    "/contactPictures/Pisgah.jpg",
   ];
   let randomPhoto = photos[Math.floor(Math.random() * photos.length)];
 
