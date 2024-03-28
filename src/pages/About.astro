@@ -3,4 +3,75 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
 const pageTitle = "About";
 ---
 
-<PrimaryLayout pageTitle={pageTitle} />
+<PrimaryLayout pageTitle={pageTitle}>
+  <div
+    class="about-container animate-fade animate-once animate-duration-[500ms] animate-delay-300 animate-ease-in-out"
+  >
+    <h1 class="content-header">About: Who I Am</h1>
+    <div class="content-body">
+      <p class="about-text">Hey! 👋 I'm Lucas.</p>
+      <p class="about-text">
+        I'm a Computer Science student at Northeastern University, I'm from
+        Charlotte, North Carolina, and I love making things. I want to learn and
+        see as much as I absolutely can; I have a ways to go, but that's the fun
+        of it.
+      </p>
+      <div class="content-row">
+        <div class="content-leftcolumn">
+          <h2 class="content-music-header">What I'm Listening To</h2>
+          <a class="lastfm-embed" href="https://www.last.fm/user/LucasDunker"
+            ><img
+              src="https://lastfm-recently-played.vercel.app/api?user=LucasDunker&count=5"
+            /></a
+          >
+        </div>
+        <div class="content-rightColumn"></div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .about-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 25%;
+      padding: 1rem;
+      text-align: left;
+      width: 50%;
+    }
+
+    .content-header {
+      font-weight: bold;
+      font-size: x-large;
+      margin-bottom: 2rem;
+    }
+
+    .content-music-header {
+      font-weight: bold;
+      font-size: x-large;
+      margin-bottom: 1rem;
+    }
+
+    .about-text {
+      margin-bottom: 2rem;
+    }
+
+    .lastfm-embed {
+      display: inline-block;
+    }
+
+    @media screen and (max-width: 636px) {
+      .content-header {
+        text-align: center;
+      }
+
+      .content-music-header {
+        text-align: center;
+      }
+
+      .about-text {
+        text-align: center;
+      }
+    }
+  </style>
+</PrimaryLayout>
