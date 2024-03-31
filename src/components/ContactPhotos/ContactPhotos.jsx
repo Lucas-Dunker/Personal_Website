@@ -1,4 +1,5 @@
 import Draggable from "react-draggable";
+import "@fontsource/just-another-hand";
 
 export const ContactPhotos = () => {
   const photos = [
@@ -12,8 +13,8 @@ export const ContactPhotos = () => {
   return (
     <Draggable>
       <div className="grid">
-        <div className="text-center">
-          <span className="font-bold font-sans">drag me around!</span>
+        <div className="text-center mb-2">
+          <span className="font-cursive text-4xl">drag me around!</span>
         </div>
         <div>
           <img

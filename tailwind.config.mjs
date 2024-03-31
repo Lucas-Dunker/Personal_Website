@@ -7,6 +7,7 @@ module.exports = {
     fontFamily: {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
       serif: ["Newsreader", ...defaultTheme.fontFamily.serif],
+      cursive: ["Just Another Hand"],
     },
     extend: {
       textColor: {
