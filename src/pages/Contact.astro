@@ -9,39 +9,41 @@ const pageTitle = "Contact";
 
 <PrimaryLayout pageTitle={pageTitle}>
   <div
-    class="contact-container animate-fade animate-once animate-duration-[500ms] animate-delay-300 animate-ease-in-out"
+    class="page-container animate-fade animate-once animate-duration-[500ms] animate-delay-300 animate-ease-in-out"
   >
-    <h1 class="content-header">Where To Find Me</h1>
-    <div class="content-body">
-      <p class="contact-text">
-        Let's get in touch! Coffee? Jam session? Walk on the beach?
-      </p>
-      <ul class="contact-list">
-        <li class="contact-element">
-          <a href="https://www.linkedin.com/in/lucasdunker/">LinkedIn</a>
-          <i class="ml-1 mr-1 fa-solid fa-arrow-right"></i>
-          <a href="https://www.linkedin.com/in/lucasdunker/"
-            ><i class="fa-brands fa-linkedin fa-xl"></i></a
-          >
-        </li>
-        <li class="contact-element">
-          <a href="https://github.com/Lucas-Dunker">GitHub</a>
-          <i class="ml-1 mr-1 fa-solid fa-arrow-right"></i>
-          <a href="https://github.com/Lucas-Dunker"
-            ><i class="fa-brands fa-github fa-lg"></i></a
-          >
-        </li>
-        <li class="contact-element">
-          <a href="mailto:dunker.l@northeastern.edu">Email </a>
-          <i class="ml-1 mr-1 fa-solid fa-arrow-right"></i>
-          <a href="mailto:dunker.l@northeastern.edu"
-            ><i class="fa-solid fa-envelope fa-lg"></i></a
-          >
-        </li>
-        <li class="contact-element">
-          CV Available on Request! <i class="ml-1 fa-solid fa-file"></i>
-        </li>
-      </ul>
+    <div class="contact-container">
+      <h1 class="content-header">Where To Find Me</h1>
+      <div class="content-body">
+        <p class="contact-text">
+          Let's get in touch! Coffee? Jam session? Walk on the beach?
+        </p>
+        <ul class="contact-list">
+          <li class="contact-element">
+            <a href="https://www.linkedin.com/in/lucasdunker/">LinkedIn</a>
+            <i class="ml-1 mr-1 fa-solid fa-arrow-right"></i>
+            <a href="https://www.linkedin.com/in/lucasdunker/"
+              ><i class="fa-brands fa-linkedin fa-xl"></i></a
+            >
+          </li>
+          <li class="contact-element">
+            <a href="https://github.com/Lucas-Dunker">GitHub</a>
+            <i class="ml-1 mr-1 fa-solid fa-arrow-right"></i>
+            <a href="https://github.com/Lucas-Dunker"
+              ><i class="fa-brands fa-github fa-lg"></i></a
+            >
+          </li>
+          <li class="contact-element">
+            <a href="mailto:dunker.l@northeastern.edu">Email </a>
+            <i class="ml-1 mr-1 fa-solid fa-arrow-right"></i>
+            <a href="mailto:dunker.l@northeastern.edu"
+              ><i class="fa-solid fa-envelope fa-lg"></i></a
+            >
+          </li>
+          <li class="contact-element">
+            CV Available on Request! <i class="ml-1 fa-solid fa-file"></i>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="image-container">
       <ContactPhotos client:visible />
@@ -50,22 +52,24 @@ const pageTitle = "Contact";
 </PrimaryLayout>
 
 <style>
+  .page-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 25vw;
+    margin-right: 25vw;
+  }
   .contact-container {
     display: flex;
     flex-direction: column;
-    margin-left: 25vw;
     padding: 1rem;
     text-align: left;
-    max-width: 50%;
+    max-width: 50vw;
   }
 
   .content-header {
     font-weight: bold;
     font-size: x-large;
     margin-bottom: 2rem;
-  }
-
-  .content-body {
   }
 
   .contact-text {
@@ -81,12 +85,10 @@ const pageTitle = "Contact";
     margin-bottom: 2rem;
   }
   .image-container {
-    position: absolute;
-    right: 20vw;
-    bottom: 30vh;
+    padding-left: 20%;
   }
 
-  @media screen and (max-width: 636px) {
+  @media screen and (max-width: 650px) {
     .contact-container {
       display: flex;
       flex-direction: column;
@@ -103,9 +105,7 @@ const pageTitle = "Contact";
 
   @media screen and (max-width: 1500px) {
     .image-container {
-      position: static;
-      right: auto;
-      left: auto;
+      display: none;
     }
   }
 </style>

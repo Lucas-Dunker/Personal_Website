@@ -3,9 +3,7 @@ const date = new Date();
 const currentYear = date.getFullYear();
 ---
 
-<footer
-  class="animate-fade-up animate-once animate-duration-[800ms] animate-delay-500 animate-ease-in-out"
->
+<footer>
   <div>
     <span
       >Made with ♥ + 💪 | © {currentYear} Lucas Dunker. All rights reserved.</span
@@ -15,14 +13,9 @@ const currentYear = date.getFullYear();
 
 <style>
   footer {
-    display: inline-block;
-    position: fixed;
-    bottom: 0;
-    margin-bottom: 1rem;
-    padding-top: 2rem;
-    width: 100%;
+    width: 100vw;
     text-align: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 3rem 2rem;
+    margin-top: auto;
   }
 </style>
