@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import spinner from "../../public/loading-ring.svg";
 
 export const ParticlesEngine = () => {
   const [init, setInit] = useState(false);
@@ -93,5 +94,9 @@ export const ParticlesEngine = () => {
     );
   }
 
-  return <></>;
+  return (
+    <div className="fixed left-[50%] top-[50%]">
+      <img height="48px" width="48px" src={spinner.src} />
+    </div>
+  );
 };
