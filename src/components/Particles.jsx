@@ -23,6 +23,7 @@ export const ParticlesEngine = () => {
     () => ({
       fpsLimit: 120,
       fullScreen: true,
+      smooth: true,
       zLayers: 1,
       interactivity: {
         events: {
@@ -95,7 +96,7 @@ export const ParticlesEngine = () => {
   }
 
   return (
-    <div className="fixed left-[49%] top-[50%]">
+    <div className="fixed left-[49%] top-[50%] animate-fade animate-delay-500">
       <img height="48px" width="48px" src={spinner.src} />
     </div>
   );
