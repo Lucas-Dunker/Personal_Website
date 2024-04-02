@@ -95,7 +95,7 @@ export const ParticlesEngine = () => {
   }
 
   return (
-    <div className="fixed left-[50%] top-[50%]">
+    <div className="fixed left-[49%] top-[50%]">
       <img height="48px" width="48px" src={spinner.src} />
     </div>
   );
