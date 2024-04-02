@@ -1,27 +1,29 @@
 import Draggable from "react-draggable";
 import "@fontsource/just-another-hand";
 
-export const ContactPhotos = () => {
+export const Paintings = () => {
   const photos = [
-    "/contactPictures/Alpaca.jpg",
-    "/contactPictures/Fuji.jpg",
-    "/contactPictures/Kyoto.jpg",
-    "/contactPictures/Pisgah.jpg",
+    "/paintings/Bierstadt_Mountains.jpg",
+    "/paintings/Monet_Spring.jpg",
+    "/paintings/Monet_Sunset.jpg",
+    "/paintings/Nighthawks.jpg",
+    "/paintings/Quixote_Demons.jpg",
+    "/paintings/Saturn_Son.jpg",
+    "/paintings/Skeleton_Cigarette.jpg",
+    "/paintings/Sublime.jpg",
+    "/paintings/Wizard_Tower.jpg",
   ];
   let randomPhoto = photos[Math.floor(Math.random() * photos.length)];
 
   return (
     <Draggable>
       <div className="grid">
-        <div className="text-center mb-2">
-          <span className="font-cursive text-4xl">drag me around!</span>
-        </div>
         <div>
           <img
             src={randomPhoto}
             alt="Contact Image"
             width="500"
-            height="600"
+            height="300"
             className=""
             draggable="false"
           />
