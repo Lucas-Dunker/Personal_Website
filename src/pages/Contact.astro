@@ -12,35 +12,26 @@ const pageTitle = "Contact";
     class="page-container animate-fade animate-once animate-duration-[500ms] animate-delay-300 animate-ease-in-out"
   >
     <div class="contact-container">
-      <h1 class="content-header">Where To Find Me</h1>
+      <h1 class="content-header">WHERE TO FIND ME</h1>
       <div class="content-body">
         <p class="contact-text">
           Let's get in touch! Coffee? Jam session? Walk on the beach?
         </p>
         <ul class="contact-list">
           <li class="contact-element">
-            <a href="https://www.linkedin.com/in/lucasdunker/">LinkedIn</a>
-            <i class="ml-1 mr-1 fa-solid fa-arrow-right"></i>
             <a href="https://www.linkedin.com/in/lucasdunker/"
-              ><i class="fa-brands fa-linkedin fa-xl"></i></a
+              ><i class="fa-brands fa-linkedin fa-5x"></i></a
             >
           </li>
           <li class="contact-element">
-            <a href="https://github.com/Lucas-Dunker">GitHub</a>
-            <i class="ml-1 mr-1 fa-solid fa-arrow-right"></i>
             <a href="https://github.com/Lucas-Dunker"
-              ><i class="fa-brands fa-github fa-lg"></i></a
+              ><i class="fa-brands fa-github fa-5x"></i></a
             >
           </li>
           <li class="contact-element">
-            <a href="mailto:dunker.l@northeastern.edu">Email </a>
-            <i class="ml-1 mr-1 fa-solid fa-arrow-right"></i>
             <a href="mailto:dunker.l@northeastern.edu"
-              ><i class="fa-solid fa-envelope fa-lg"></i></a
+              ><i class="fa-solid fa-envelope fa-5x"></i></a
             >
-          </li>
-          <li class="contact-element">
-            CV Available on Request! <i class="ml-1 fa-solid fa-file"></i>
           </li>
         </ul>
       </div>
@@ -57,19 +48,21 @@ const pageTitle = "Contact";
     flex-direction: row;
     margin-left: 25vw;
     margin-right: 25vw;
+    max-width: 50vw;
+    justify-content: space-between;
   }
   .contact-container {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     text-align: left;
-    max-width: 50vw;
   }
 
   .content-header {
     font-weight: bold;
     font-size: x-large;
     margin-bottom: 2rem;
+    font-family: "DM Serif Display", sans-serif;
   }
 
   .contact-text {
@@ -77,15 +70,14 @@ const pageTitle = "Contact";
   }
 
   .contact-list {
-    font-weight: bolder;
-    list-style-type: circle;
   }
 
   .contact-element {
-    margin-bottom: 2rem;
+    display: inline-block;
+    margin: 2rem;
   }
   .image-container {
-    padding-left: 20%;
+    padding-left: 4rem;
   }
 
   @media screen and (max-width: 650px) {

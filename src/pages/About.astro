@@ -1,5 +1,7 @@
 ---
 import PrimaryLayout from "../layouts/PrimaryLayout.astro";
+import { Paintings } from "../components/Paintings";
+
 const pageTitle = "About";
 ---
 
@@ -7,7 +9,7 @@ const pageTitle = "About";
   <div
     class="about-container animate-fade animate-once animate-duration-[500ms] animate-delay-300 animate-ease-in-out"
   >
-    <h1 class="content-header">Who I Am</h1>
+    <h1 class="content-header">WHO I AM</h1>
     <div class="content-body">
       <p class="about-text">Hey! 👋 I'm Lucas.</p>
       <p class="about-text">
@@ -20,75 +22,96 @@ const pageTitle = "About";
       </p>
       <div class="content-row">
         <div class="content-leftcolumn">
-          <h2 class="content-music-header">What I'm Listening To</h2>
+          <h2 class="content-music-header text-center">
+            WHAT I'M LISTENING TO
+          </h2>
           <a
             class="lastfm-embed animate-fade-up animate-once animate-duration-[500ms] animate-delay-1000 animate-ease-in-out"
             href="https://www.last.fm/user/LucasDunker"
             ><img
+              width="auto"
+              height="auto"
               src="https://lastfm-recently-played.vercel.app/api?user=LucasDunker&count=5"
             /></a
           >
         </div>
-        <div class="content-rightColumn"></div>
+        <div class="content-rightColumn">
+          <h2 class="content-music-header text-center">PAINTING OF THE DAY</h2>
+          <div
+            class="image-container animate-fade-up animate-once animate-duration-[500ms] animate-delay-1000 animate-ease-in-out"
+          >
+            <Paintings client:visible />
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <style>
-    .about-container {
-      display: flex;
-      flex-direction: column;
-      margin-left: 25vw;
-      padding: 1rem;
-      text-align: left;
-      max-width: 50%;
-    }
-
-    .content-header {
-      font-weight: bold;
-      font-size: x-large;
-      margin-bottom: 2rem;
-    }
-
-    .content-music-header {
-      font-weight: bold;
-      font-size: x-large;
-      margin-bottom: 1rem;
-    }
-
-    .about-text {
-      margin-bottom: 2rem;
-    }
-
-    .lastfm-embed {
-      display: inline-block;
-    }
-
-    @media screen and (max-width: 636px) {
+    <style>
       .about-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        margin: auto;
-        max-width: 90%;
-      }
-
-      .lastfm-embed {
-        display: fixed;
+        margin-left: 25vw;
+        margin-right: 25vw;
+        padding: 1rem;
+        text-align: left;
+        max-width: 50vw;
       }
 
       .content-header {
-        text-align: center;
+        font-weight: bold;
+        font-size: x-large;
+        margin-bottom: 2rem;
+        font-family: "DM Serif Display", sans-serif;
       }
 
       .content-music-header {
-        text-align: center;
+        font-weight: bold;
+        font-size: x-large;
+        margin-bottom: 1rem;
+        font-family: "DM Serif Display", sans-serif;
       }
 
       .about-text {
-        text-align: center;
+        margin-bottom: 2rem;
       }
-    }
-  </style>
+
+      .lastfm-embed {
+        display: inline-block;
+      }
+
+      .content-row {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: space-between;
+      }
+
+      @media screen and (max-width: 650px) {
+        .about-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          margin: auto;
+          max-width: 90%;
+        }
+
+        .lastfm-embed {
+          display: fixed;
+        }
+
+        .content-header {
+          text-align: center;
+        }
+
+        .content-music-header {
+          text-align: center;
+        }
+
+        .about-text {
+          text-align: center;
+        }
+      }
+    </style>
+  </div>
 </PrimaryLayout>
