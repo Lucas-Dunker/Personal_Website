@@ -1,15 +1,16 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
+
+import { loadLinksPreset } from "@tsparticles/preset-links";
 import spinner from "../../src/loading-ring.svg";
 
 export const ParticlesEngine = () => {
   const [init, setInit] = useState(false);
 
-  // this should be run only once per application lifetime
+  // This should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
+      await loadLinksPreset(engine);
     }).then(() => {
       setInit(true);
     });
@@ -25,23 +26,6 @@ export const ParticlesEngine = () => {
       fullScreen: true,
       smooth: true,
       zLayers: 1,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true,
-            mode: "repulse",
-          },
-        },
-        modes: {
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
-        },
-      },
       particles: {
         color: {
           value: "#000000",
@@ -84,7 +68,7 @@ export const ParticlesEngine = () => {
     []
   );
 
-  if (false) {
+  if (init) {
     return (
       <Particles
         id="tsparticles"
