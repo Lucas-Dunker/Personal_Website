@@ -15,6 +15,9 @@ const pageTitle = "Resume";
       </div>
     </div>
     <div class="image-container">
+      <div class="text-center mb-2 mt-4">
+        <span class="font-cursive text-4xl">drag me around!</span>
+      </div>
       <ContactPhoto />
     </div>
   </div>
@@ -58,7 +61,10 @@ const pageTitle = "Resume";
     padding-left: 4rem;
   }
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 750px) {
+    .page-container {
+      display: block;
+    }
     .contact-container {
       display: flex;
       flex-direction: column;
@@ -68,14 +74,12 @@ const pageTitle = "Resume";
       max-width: 90%;
     }
 
-    .contact-body {
-      text-align: center;
-    }
-  }
-
-  @media screen and (max-width: 1500px) {
     .image-container {
       display: none;
+    }
+
+    .contact-body {
+      text-align: center;
     }
   }
 </style>

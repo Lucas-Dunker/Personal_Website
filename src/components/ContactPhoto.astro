@@ -28,7 +28,4 @@ const randomOptimizedImage =
   optimizedImages[Math.floor(Math.random() * images.length)];
 ---
 
-<div class="text-center mb-2 mt-4">
-  <span class="font-cursive text-4xl">drag me around!</span>
-</div>
 <DraggableComponent client:load image={randomOptimizedImage.src} />
