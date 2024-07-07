@@ -1,6 +1,6 @@
 ---
 import PrimaryLayout from "../layouts/PrimaryLayout.astro";
-import { Paintings } from "../components/Paintings";
+import AboutPhoto from "../components/AboutPhoto.astro";
 
 const pageTitle = "About";
 ---
@@ -29,8 +29,8 @@ const pageTitle = "About";
             class="lastfm-embed animate-fade-up animate-once animate-duration-[500ms] animate-delay-1000 animate-ease-in-out"
             href="https://www.last.fm/user/LucasDunker"
             ><img
-              width="auto"
-              height="auto"
+              width="475"
+              height="500"
               src="https://lastfm-recently-played.vercel.app/api?user=LucasDunker&count=5"
             /></a
           >
@@ -38,9 +38,9 @@ const pageTitle = "About";
         <div class="content-rightColumn">
           <h2 class="content-music-header text-center">PAINTING OF THE DAY</h2>
           <div
-            class="image-container animate-fade-up animate-once animate-duration-[500ms] animate-delay-1000 animate-ease-in-out"
+            class="image-container animate-fade-up animate-once animate-duration-[500ms] animate-delay-1000 animate-ease-in-out max-w-[500px]"
           >
-            <Paintings client:visible />
+            <AboutPhoto />
           </div>
         </div>
       </div>

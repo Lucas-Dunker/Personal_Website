@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 
 import { loadLinksPreset } from "@tsparticles/preset-links";
-import spinner from "../../src/loading-ring.svg";
+import spinner from "../assets/loading-ring.svg";
 
 export const ParticlesEngine = () => {
   const [init, setInit] = useState(false);

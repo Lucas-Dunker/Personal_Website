@@ -1,0 +1,17 @@
+---
+import { DraggableComponent } from "./DraggableComponent";
+import fs from "fs";
+
+// Get Random Image For Contact Page
+const folderPath = "src/assets/contactPictures";
+const images = fs.readdirSync(folderPath);
+let randomImagePath =
+  folderPath + "/" + images[Math.floor(Math.random() * images.length)];
+---
+
+<div>
+  <div class="text-center mb-2">
+    <span class="font-cursive text-4xl">drag me around!</span>
+  </div>
+  <DraggableComponent client:load image={randomImagePath} />
+</div>

@@ -8,18 +8,13 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   output: "server",
-  adapter: cloudflare(),
   site: "https://lucasdunker.com",
   integrations: [tailwind(), react(), sitemap()],
-  image: {
-    service: {
-      entrypoint: "astro/assets/services/sharp",
-      config: {
-        limitInputPixels: false,
-      },
-    },
-  },
+  adapter: cloudflare({
+    imageService: "cloudflare",
+  }),
   prefetch: {
+    defaultStrategy: "load",
     prefetchAll: true,
   },
 });

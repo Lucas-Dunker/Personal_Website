@@ -1,6 +1,6 @@
 ---
 import PrimaryLayout from "../layouts/PrimaryLayout.astro";
-import { ContactPhotos } from "../components/ContactPhotos";
+import ContactPhoto from "../components/ContactPhoto.astro";
 const pageTitle = "Contact";
 ---
 
@@ -37,7 +37,7 @@ const pageTitle = "Contact";
       </div>
     </div>
     <div class="image-container">
-      <ContactPhotos client:visible />
+      <ContactPhoto />
     </div>
   </div>
 </PrimaryLayout>

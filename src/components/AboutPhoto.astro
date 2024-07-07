@@ -1,0 +1,12 @@
+---
+import { DraggableComponent } from "./DraggableComponent";
+import fs from "fs";
+
+// Get Random Image For About Page
+const folderPath = "src/assets/aboutPictures";
+const images = fs.readdirSync(folderPath);
+let randomImagePath =
+  folderPath + "/" + images[Math.floor(Math.random() * images.length)];
+---
+
+<DraggableComponent client:load image={randomImagePath} />
