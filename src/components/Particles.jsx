@@ -28,10 +28,10 @@ export const ParticlesEngine = () => {
       zLayers: 1,
       particles: {
         color: {
-          value: "#000000",
+          value: "#857D72",
         },
         links: {
-          color: "#000000",
+          color: "#857D72",
           distance: 150,
           enable: true,
           opacity: 0.5,
