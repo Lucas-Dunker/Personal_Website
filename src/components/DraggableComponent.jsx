@@ -1,5 +1,4 @@
 import Draggable from "react-draggable";
-import "@fontsource/just-another-hand";
 
 export const DraggableComponent = ({ image }) => {
   return (

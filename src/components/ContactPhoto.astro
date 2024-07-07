@@ -1,17 +1,32 @@
 ---
 import { DraggableComponent } from "./DraggableComponent";
-import fs from "fs";
+import { getImage } from "astro:assets";
+import "@fontsource/just-another-hand";
 
 // Get Random Image For Contact Page
-const folderPath = "src/assets/contactPictures";
-const images = fs.readdirSync(folderPath);
-let randomImagePath =
-  folderPath + "/" + images[Math.floor(Math.random() * images.length)];
+import Alpaca from "../assets/contactPictures/Alpaca.jpg";
+import Fuji from "../assets/contactPictures/Fuji.jpg";
+import Kyoto from "../assets/contactPictures/Kyoto.jpg";
+import Pisgah from "../assets/contactPictures/Pisgah.jpg";
+
+let images = [Alpaca, Fuji, Kyoto, Pisgah];
+
+let optimizedImages = [];
+
+for (var i = 0; i < images.length; i++) {
+  optimizedImages.push(
+    await getImage({
+      src: images[i],
+      format: "webp",
+    })
+  );
+}
+
+const randomOptimizedImage =
+  optimizedImages[Math.floor(Math.random() * images.length)];
 ---
 
-<div>
-  <div class="text-center mb-2">
-    <span class="font-cursive text-4xl">drag me around!</span>
-  </div>
-  <DraggableComponent client:load image={randomImagePath} />
+<div class="text-center mb-2 mt-4">
+  <span class="font-cursive text-4xl">drag me around!</span>
 </div>
+<DraggableComponent client:load image={randomOptimizedImage.src} />
