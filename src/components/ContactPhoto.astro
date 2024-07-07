@@ -7,8 +7,11 @@ import "@fontsource/just-another-hand";
 import Fuji from "../assets/contactPictures/Fuji.jpg";
 import Kyoto from "../assets/contactPictures/Kyoto.jpg";
 import Pisgah from "../assets/contactPictures/Pisgah.jpg";
+import WATERFALL from "../assets/contactPictures/WATERFALL.jpg";
+import Sunset from "../assets/contactPictures/Sunset.jpg";
+import Summit from "../assets/contactPictures/Summit.jpg";
 
-let images = [Fuji, Kyoto, Pisgah];
+let images = [Fuji, Kyoto, Pisgah, WATERFALL, Sunset, Summit];
 
 let optimizedImages = [];
 
@@ -16,7 +19,7 @@ for (var i = 0; i < images.length; i++) {
   optimizedImages.push(
     await getImage({
       src: images[i],
-      format: "webp",
+      format: "avif",
     })
   );
 }
