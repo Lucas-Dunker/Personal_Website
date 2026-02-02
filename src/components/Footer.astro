@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import lucasMDGif from "../assets/LucasMD.gif";
 const date = new Date();
 const currentYear = date.getFullYear();
 ---
@@ -8,30 +9,46 @@ const currentYear = date.getFullYear();
   class="animate-fade animate-once animate-duration-[500ms] animate-delay-1000 animate-ease-in-out"
 >
   <div>
-    <span
-      >Made with ♥ + 💪 | © {currentYear} Lucas Dunker. All rights reserved. |
-      <a href="https://www.linkedin.com/in/lucasdunker/"
-        ><Icon name="linkedin" class="inline mx-1 mb-1 w-[1.5rem] h-[1.5rem]" />
-      </a>
-      <a href="https://github.com/Lucas-Dunker"
-        ><Icon
-          name="github"
-          class="inline mx-1 mb-1 w-[1.5rem] h-[1.5rem]"
-        /></a
-      >
-      <a href="mailto:dunker.l@northeastern.edu"
-        ><Icon name="email" class="inline mx-1 mb-1 w-[1.5rem] h-[1.5rem]" /></a
-      ></span
+    <span> </span>Made with ♥ + 💪 | © {currentYear} Lucas Dunker. All rights reserved.
+    |
+    <a href="https://www.linkedin.com/in/lucasdunker/" class="footer-icon"
+      ><Icon name="linkedin" class="inline mx-1 mb-1 w-[1.5rem] h-[1.5rem]" />
+    </a>
+    <a href="https://github.com/Lucas-Dunker" class="footer-icon"
+      ><Icon name="github" class="inline mx-1 mb-1 w-[1.5rem] h-[1.5rem]" /></a
     >
+    <a href="mailto:dunker.l@northeastern.edu" class="footer-icon"
+      ><Icon name="email" class="inline mx-1 mb-1 w-[1.5rem] h-[1.5rem]" /></a
+    >
+    <a href="https://lucasmd.dev" class="footer-icon"
+      ><img
+        src={lucasMDGif.src}
+        alt="Lucas MD"
+        class="inline mx-1 mb-1 w-[5rem] h-[2rem]"
+      />
+    </a>
   </div>
-</footer>
 
-<style>
-  footer {
-    width: 100vw;
-    text-align: center;
-    padding: 3rem 2rem;
-    margin-top: auto;
-    overflow: hidden;
-  }
-</style>
+  <style>
+    footer {
+      width: 100vw;
+      text-align: center;
+      padding: 3rem 2rem;
+      margin-top: auto;
+      overflow: hidden;
+    }
+
+    .footer-icon {
+      display: inline-block;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.85;
+      }
+
+      &:active {
+        transform: scale(0.97);
+      }
+    }
+  </style>
+</footer>

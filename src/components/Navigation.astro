@@ -1,110 +1,9 @@
----
-
----
-
 <div class="nav-links">
-  <a class="nav-link glitch-text" href="/About">About</a>
-  <a class="nav-link glitch-text" href="/Work/">Work</a>
-  <a class="nav-link glitch-text" href="/Writing/">Writing</a>
-  <div class="glitch-svg-container">
-    <svg
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-    >
-      <defs>
-        <svg
-          id="glitchmask-r"
-          width="100vw"
-          height="100vh"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-        >
-          <line class="top-r" x1="0" y1="0" x2="100%" y2="0"> </line>
-          <line class="bot-r" x1="0" y1="100%" x2="100%" y2="100%"></line>
-        </svg>
-        <svg
-          id="glitchmask-g"
-          width="100%"
-          height="100%"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-        >
-          <line class="top-g" x1="0" y1="0" x2="100%" y2="0"></line>
-          <line class="bot-g" x1="0" y1="100%" x2="100%" y2="100%"></line>
-        </svg>
-
-        <filter
-          color-interpolation-filters="sRGB"
-          id="filter"
-          width="100%"
-          height="100%"
-          x="0"
-          y="0"
-        >
-          <feFlood flood-color="black" result="black"></feFlood>
-
-          <!-- red text start -->
-          <feFlood flood-color="red" result="REDTXT_FLOOD_10"></feFlood>
-          <feComposite
-            operator="in"
-            in="REDTXT_FLOOD_10"
-            in2="SourceAlpha"
-            result="REDTXT_COMP_20"></feComposite>
-          <feOffset in="SourceGraphic" dx="-2" dy="0" result="REDTXT_OFFSET_30"
-          ></feOffset>
-          <feMerge result="REDTXT_MERGE_40">
-            <feMergeNode in="black"></feMergeNode>
-            <feMergeNode in="REDTXT_COMP_20"></feMergeNode>
-            <feMergeNode in="REDTXT_OFFSET_30"></feMergeNode>
-          </feMerge>
-          <feImage
-            preserveAspectRatio="none"
-            id="mask-r"
-            result="REDTXT_IMG_50"
-            xlink:href="#glitchmask-r"></feImage>
-          <feComposite
-            in2="REDTXT_IMG_50"
-            in="REDTXT_MERGE_40"
-            operator="out"
-            result="REDTXT_COMP_60"></feComposite>
-          <!-- red text end -->
-
-          <!-- green text start -->
-          <feFlood flood-color="limegreen" result="GREENTXT_FLOOD_10"></feFlood>
-          <feComposite
-            operator="in"
-            in="GREENTXT_FLOOD_10"
-            in2="SourceAlpha"
-            result="GREENTXT_COMP_20"></feComposite>
-          <feOffset in="SourceGraphic" dx="2" dy="0" result="GREENTXT_OFFSET_30"
-          ></feOffset>
-          <feMerge result="GREENTXT_MERGE_40">
-            <feMergeNode in="black"></feMergeNode>
-            <feMergeNode in="GREENTXT_COMP_20"></feMergeNode>
-            <feMergeNode in="GREENTXT_OFFSET_30"></feMergeNode>
-          </feMerge>
-          <feImage
-            preserveAspectRatio="none"
-            id="mask-g"
-            result="GREENTXT_IMG_50"
-            xlink:href="#glitchmask-g"></feImage>
-          <feComposite
-            in2="GREENTXT_IMG_50"
-            in="GREENTXT_MERGE_40"
-            operator="out"
-            result="GREENTXT_COMP_60"></feComposite>
-          <!-- green text end -->
-
-          <feMerge result="MERGE_10">
-            <feMergeNode in="SourceGraphic"></feMergeNode>
-            <feMergeNode in="REDTXT_COMP_60"></feMergeNode>
-            <feMergeNode in="GREENTXT_COMP_60"></feMergeNode>
-          </feMerge>
-        </filter>
-      </defs>
-    </svg>
-  </div>
+  <a class="nav-link dynamic-text" href="/About" data-text="About">About</a>
+  <a class="nav-link dynamic-text" href="/Work/" data-text="Work">Work</a>
+  <a class="nav-link dynamic-text" href="/Writing/" data-text="Writing"
+    >Writing</a
+  >
 </div>
 
 <style lang="scss">
@@ -119,6 +18,45 @@
     margin: 5px;
   }
 
+  .dynamic-text {
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      transition: width 0.3s ease;
+    }
+
+    &::before {
+      top: 0;
+      right: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      left: 0;
+    }
+
+    &:hover {
+      opacity: 0.85;
+
+      &::before,
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+
   @media screen and (min-width: 636px) {
     .nav-links {
       flex-direction: row;
@@ -129,70 +67,12 @@
       margin: 5px;
       display: inline-block;
     }
-  }
-</style>
 
-<style lang="scss">
-  @media screen and (min-width: 636px) {
-    .glitch-text:hover,
-    .glitch-text:focus {
-      filter: url(#filter);
-      fill: white;
-      background: black;
-      color: white;
-    }
-
-    .svgtext {
-      display: block;
-      position: relative;
-      overflow: hidden;
-      margin: 0 auto;
-    }
-
-    .top-r,
-    .bot-r,
-    .top-g,
-    .bot-g {
-      stroke: #ffffff;
-    }
-
-    .top-r {
-      stroke-width: 100px;
-      animation: topani 3.5s linear infinite;
-    }
-
-    .bot-r {
-      stroke-width: 100px;
-      animation: botani 4s linear infinite;
-    }
-
-    .top-g {
-      stroke-width: 50px;
-      animation: topani 4s linear reverse infinite;
-    }
-
-    .bot-g {
-      stroke-width: 50%;
-      animation: botani 3.5s linear reverse infinite;
-    }
-
-    @mixin createRandomKeyframes($numberOfKeys) {
-      $delta: round(100 / $numberOfKeys);
-
-      @for $i from 1 through $numberOfKeys {
-        $time: ($i * $delta - random($delta)) + "%";
-        #{$time} {
-          stroke-width: random(200) + px;
-        }
+    .dynamic-text {
+      &::before,
+      &::after {
+        height: 2px;
       }
-    }
-
-    @keyframes topani {
-      @include createRandomKeyframes(10 + random(10));
-    }
-
-    @keyframes botani {
-      @include createRandomKeyframes(10 + random(10));
     }
   }
 </style>

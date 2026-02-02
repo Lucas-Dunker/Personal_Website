@@ -1,8 +1,9 @@
 ---
 import PrimaryLayout from "../layouts/PrimaryLayout.astro";
 import AboutPhoto from "../components/AboutPhoto.astro";
+import chairGif from "../assets/LucasMD-Chair.gif";
 
-const pageTitle = "About";
+const pageTitle = "Lucas Dunker - About";
 ---
 
 <PrimaryLayout pageTitle={pageTitle}>
@@ -13,11 +14,15 @@ const pageTitle = "About";
     <div class="content-body">
       <p class="about-text">Hey! 👋 I'm Lucas.</p>
       <p class="about-text">
-        I'm a Computer Science student at Northeastern University, I'm from
-        Charlotte, North Carolina, and I love making things. I want to learn and
-        see as much as I absolutely can; I have a ways to go, but that's what
-        makes this fun.
+        I'm a Computer Science graduate at Northeastern University, I'm from
+        Charlotte, North Carolina, and I love making things. Like what you see?
+        Contact me!
       </p>
+      <div
+        class="chair-gif-container animate-fade-in animate-once animate-duration-[500ms] animate-delay-500 animate-ease-in-out"
+      >
+        <img src={chairGif.src} alt="Lucas MD Chair" class="chair-gif" />
+      </div>
       <div class="content-row">
         <div class="content-leftcolumn">
           <h2 class="content-music-header text-center">
@@ -59,18 +64,29 @@ const pageTitle = "About";
         font-weight: bold;
         font-size: x-large;
         margin-bottom: 2rem;
-        font-family: "DM Serif Display", sans-serif;
+        font-family: "Architects Daughter", cursive;
       }
 
       .content-music-header {
         font-weight: bold;
         font-size: x-large;
         margin-bottom: 1rem;
-        font-family: "DM Serif Display", sans-serif;
+        font-family: "Architects Daughter", cursive;
       }
 
       .about-text {
         margin-bottom: 2rem;
+      }
+
+      .chair-gif-container {
+        display: flex;
+        justify-content: center;
+        margin-top: -5.5rem;
+        margin-bottom: -4rem;
+      }
+
+      .chair-gif {
+        height: auto;
       }
 
       .lastfm-embed {

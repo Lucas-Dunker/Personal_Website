@@ -18,5 +18,13 @@ export default defineConfig({
   prefetch: {
     defaultStrategy: "load",
     prefetchAll: true
+  },
+  vite: {
+    server: {
+      watch: {
+        usePolling: true,
+        interval: 1000
+      }
+    }
   }
 });

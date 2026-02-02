@@ -1,7 +1,7 @@
 {
   "name": "personal_site",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -19,10 +19,13 @@
     "@astrojs/sitemap": "^3.0.5",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/inter": "^5.0.17",
+    "@fontsource/architects-daughter": "^5.2.7",
     "@fontsource/bebas-neue": "^5.0.19",
     "@fontsource/dm-sans": "^5.0.21",
     "@fontsource/dm-serif-display": "^5.0.19",
     "@fontsource/just-another-hand": "^5.0.8",
+    "@fontsource/mansalva": "^5.2.7",
+    "@fontsource/permanent-marker": "^5.2.7",
     "@tsparticles/preset-links": "^3.1.0",
     "@tsparticles/react": "^3.0.0",
     "@types/react": "^18.2.55",

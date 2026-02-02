@@ -1,30 +1,34 @@
 ---
-import PrimaryLayout from '../layouts/PrimaryLayout.astro';
-const pageTitle = 'Work';
+import PrimaryLayout from "../layouts/PrimaryLayout.astro";
+const pageTitle = "Lucas Dunker - Work";
 ---
 
 <PrimaryLayout pageTitle={pageTitle}>
   <div
-    class='work-container animate-fade animate-once animate-duration-[500ms] animate-delay-300 animate-ease-in-out'
+    class="work-container animate-fade animate-once animate-duration-[500ms] animate-delay-300 animate-ease-in-out"
   >
-    <h1 class='content-header'>WHAT I MAKE</h1>
-    <div class='content-make'>
-      <p class='work-text'>
+    <h1 class="content-header">WHAT I MAKE</h1>
+    <div class="content-make">
+      <p class="work-text">
         It's always been hard for me to sit still, so no matter what, there's
         always something I'm building, testing, or working on in my spare time.
       </p>
-      <p class='work-text'>
-        Aside from my Sandbox contributions and freelance work, I have a bunch
-        of ideas I want to pursue in the future. Check out my <a
-          href='https://github.com/Lucas-Dunker'><b>GitHub</b></a
+      <p class="work-text">
+        Aside from my open-source contributions and freelance work, I have a
+        bunch of ideas I want to pursue in the future. Check out my <a
+          href="https://github.com/Lucas-Dunker"><b>GitHub</b></a
         > for updates!
       </p>
-      <div class='content-work'>
-        <h2 class='content-work-header'>WHERE I'VE WORKED</h2>
+      <p class="work-text">
+        I've also heard there's a few subdomains on this site, but you didn't
+        hear that from me...
+      </p>
+      <div class="content-work">
+        <h2 class="content-work-header">WHERE I'VE WORKED</h2>
         <iframe
-          class='resume-iframe'
-          src='https://drive.google.com/file/d/10oqsUqzXLgK70DD2r6BfWbuYJLyKgWH0/preview'
-          allow='autoplay'></iframe>
+          class="resume-iframe"
+          src="https://drive.google.com/file/d/10oqsUqzXLgK70DD2r6BfWbuYJLyKgWH0/preview"
+          allow="autoplay"></iframe>
       </div>
     </div>
   </div>
@@ -49,14 +53,14 @@ const pageTitle = 'Work';
     font-weight: bold;
     font-size: x-large;
     margin-bottom: 2rem;
-    font-family: 'DM Serif Display', sans-serif;
+    font-family: "Architects Daughter", cursive;
   }
 
   .content-work-header {
     font-weight: bold;
     font-size: x-large;
     margin-bottom: 1rem;
-    font-family: 'DM Serif Display', sans-serif;
+    font-family: "Architects Daughter", cursive;
   }
 
   .work-text {
